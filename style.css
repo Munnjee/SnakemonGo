@@ -1,0 +1,140 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ysabeau Office', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("/images/bg2.jpeg");
+  background-size: cover;
+  background-position: center;
+  /* background-image: linear-gradient(0deg, #ffffff 50%, #CC0000 90%); */
+}
+
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgb(180, 215, 255);
+  border-radius: 10px;
+}
+
+.game-details {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.play-board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(25, 1fr) / repeat(25, 1fr);
+  background-image: url("images/bg.png");
+}
+
+.play-board .food {
+  background-image: url("/images/pokemon/bulbasaur.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+.play-board .head {
+  background-image: url("/images/pokeball.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  
+}
+
+.controller{
+  display: none;
+  justify-content: space-between;
+}
+.controller i{
+  width: calc(100% / 4);
+  padding: 25px 0;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  border-right: 1px solid white;
+  cursor: pointer;
+}
+
+.controller i:last-child{
+  border: none;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper{
+    width: 90vmin;
+    height: 115vmin;
+  }
+  
+  .game-details{
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+
+  .controller {
+    display: flex;
+  }
+
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
+
+/* Modal CSS */
+.modal {
+  position: fixed;
+  padding-top: 20%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-inner {
+  background: #f7f7f7;
+  text-align: center;
+  margin: auto;
+  padding: 20px 40px;
+  width: 70%;
+  max-width: 800px;
+  border-radius: 20px;
+}
+
+#replay{
+  text-decoration: none;
+  background-color: rgb(180, 215, 255);
+  color: black;
+  padding: 0.5em;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#replay:hover{
+  background-color: rgb(255, 161, 214);
+  color: white;
+}
+
+#replay:active{
+  background-color: rgb(180, 215, 255);
+}
