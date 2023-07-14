@@ -68,7 +68,7 @@ function startGame() {
     return gameOverReset();
   } 
   // Create a food div including update to back-ground image
-  let htmlMarkup = `<div class="food" style="grid-area: ${pokeY} / ${pokeX}; background-image: url('/images/pokemon/${randomPokemon}.gif')"></div>`;
+  let htmlMarkup = `<div class="food" style="grid-area: ${pokeY} / ${pokeX}; background-image: url('images/pokemon/${randomPokemon}.gif')"></div>`;
   // Checking if snake hit the food
   if (snakeX === pokeX && snakeY === pokeY) {
     randPosition();
